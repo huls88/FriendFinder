@@ -35,11 +35,11 @@ module.exports = function(app) {
     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value "true" have a table
     if (survey.length < 5) {
-      tableData.push(req.body);
+      survey.push(req.body);
       res.json(true);
     }
     else {
-      waitListData.push(req.body);
+      survey.push(req.body);
       res.json(false);
     }
   });
